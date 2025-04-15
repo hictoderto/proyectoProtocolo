@@ -1,0 +1,17 @@
+<svg width="300" height="150" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bolsa de compras -->
+  <path d="M50 50V40C50 30 58 22 68 22H92C102 22 110 30 110 40V50" stroke="#333" stroke-width="2"/>
+  <path d="M30 50H130L120 120H40L30 50Z" fill="#FFA500" stroke="#333" stroke-width="2"/>
+
+  <!-- Laptop -->
+  <rect x="140" y="30" width="60" height="40" fill="#666" stroke="#333" stroke-width="2"/>
+  <rect x="135" y="70" width="70" height="10" fill="#444" stroke="#333" stroke-width="2"/>
+
+  <!-- Bata de laboratorio más detallada -->
+  <path d="M220 30L200 120H250L230 30H220Z" fill="white" stroke="#333" stroke-width="2"/>
+  <path d="M210 120V80H225V120" stroke="#333" stroke-width="2"/> <!-- Bolsillos -->
+  <path d="M225 80H235V120" stroke="#333" stroke-width="2"/> <!-- Bolsillo derecho -->
+  <path d="M215 30V50H235V30" stroke="#333" stroke-width="2"/> <!-- Cuello de la bata -->
+
+  
+</svg>
