@@ -118,6 +118,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%; /* Hacer que el contenedor use todo el ancho disponible */
+  background: linear-gradient(to bottom, #f5f5f5, #0084ff);
 }
 
 .carousel {
@@ -133,13 +134,20 @@ body {
 }
 
 .item {
+  display: flex;
   min-width: 100%; /* Cada ítem ocupa el 100% del ancho del carrusel */
   box-sizing: border-box; /* Incluye padding y borde en el ancho */
   padding: 10px; /* Espacio interior */
-  background-color: #f0f0f0; /* Color de fondo */
   margin-right: 5px; /* Espacio entre elementos */
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espacio entre imagen y texto */
 }
 
+.item img {
+  max-width: 50%;
+  object-fit: cover;
+  border-radius: 50%; /* Si quieres que sea redonda */
+}
 .carousel-button {
   background-color: #007BFF; /* Color del botón */
   color: white; /* Color del texto del botón */
@@ -151,7 +159,15 @@ body {
   margin: 0 10px; /* Espaciado lateral */
   transition: background-color 0.3s; /* Transición de color */
 }
-
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .carousel-button:hover {
   background-color: #0056b3; /* Color de fondo al pasar el mouse */
 }/*# sourceMappingURL=main.css.map */
