@@ -29,3 +29,9 @@ class Product(Base):
             'id_vendedor':self.id_vendedor,
             'image':image_data
         }
+
+from API.Coneccion import engine  # Usando la conexión ya definida
+from API.OBJS import Base
+
+Base.metadata.create_all(engine)  # Crea las tablas si no existen
+

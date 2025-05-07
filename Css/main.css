@@ -114,6 +114,7 @@ body {
   cursor: pointer;
 }
 
+/* Carrusel */
 .carousel-container {
   display: flex;
   align-items: center;
@@ -133,6 +134,38 @@ body {
   text-align: center;
 }
 
+.carousel-item {
+  display: flex;
+  min-width: 100%; /* Cada ítem ocupa el 100% del ancho del carrusel */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+  padding: 10px; /* Espacio interior */
+  margin-right: 5px; /* Espacio entre elementos */
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espacio entre imagen y texto */
+}
+
+.carousel-item img {
+  max-width: 100%; /* Para que las imágenes se ajusten al contenedor */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
 .item {
   display: flex;
   min-width: 100%; /* Cada ítem ocupa el 100% del ancho del carrusel */

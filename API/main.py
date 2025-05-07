@@ -1,45 +1,63 @@
-
-from flask import Flask, request, Response
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-import random
-import json
-
 from API.Coneccion import session
 from API.OBJS import Product
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Para habilitar CORS, si lo necesitas para el front-end
+
+# Ruta de inicio
 @app.route('/')
 def ping():
-    return Response(json.dumps({"message": "Welcome to 4Ustore"}, ensure_ascii=False), mimetype="application/json")
+    return jsonify({"message": "Bienvenido a 4Ustore API!"})
 
-@app.route('/carusel',methods=['GET'])
-def carrusel():
-    li_Products = session.query(Product).all()
-    result_products = []
-    selected_indices = set()  # Para almacenar los índices seleccionados
+# Ruta para obtener los productos (por ejemplo, para el carrusel)
+@app.route('/productos', methods=['GET'])
+def obtener_productos():
+    try:
+        productos = session.query(Product).all()
+        productos_lista = [producto.to_dict() for producto in productos]
+        return jsonify({"data": productos_lista, "message": "Productos obtenidos con éxito!"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
-    while len(result_products) < 5:
-        # Generar un índice aleatorio
-        numero = random.randint(0, len(li_Products)-1)
+# Ruta para subir producto
+@app.route('/upload-product', methods=['POST'])
+def upload_product():
+    try:
+        # Obtener los datos del formulario
+        nombre = request.form['nombre']
+        descripcion = request.form['descripcion']
+        precio = float(request.form['precio'])
+        stock = int(request.form['stock'])
+        segundamano = request.form['segundamano'] == 'true'  # Convertirlo a booleano
 
-        # Si el índice ya ha sido seleccionado, generamos otro
-        if numero not in selected_indices:
-            selected_indices.add(numero)  # Añadimos el índice al conjunto
-            result_products.append(li_Products[numero].to_dict())
-        if len(selected_indices) == len(li_Products):
-            break
+        # Leer la imagen del producto
+        image_file = request.files['image']
+        image_data = image_file.read()  # Leer la imagen como bytes
 
-    result = {
-        'error': None,
-        'data': result_products,
-        'status': 'success',
-        'message': 'productos recuperados con exito',
-        'code': 200
-    }
-    return Response(json.dumps(result, ensure_ascii=False), mimetype="application/json")
+        # Crear un nuevo objeto Producto
+        nuevo_producto = Product(
+            nombre=nombre,
+            descripcion=descripcion,
+            precio=precio,
+            stock=stock,
+            segundamano=segundamano,
+            image=image_data,
+            id_vendedor=1  # Aquí puedes modificar el id del vendedor según sea necesario
+        )
 
+        # Guardar el producto en la base de datos
+        session.add(nuevo_producto)
+        session.commit()
 
+        return jsonify({"message": "Producto subido exitosamente!"}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=4000, debug=True)
+    app.run(debug=True)

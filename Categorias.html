@@ -1,33 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de categorías 4U, donde podrás ver productos, ofertas y mucho más.">
+    <meta property="og:title" content="4U Categorías">
+    <meta property="og:description" content="Explora nuestras categorías de productos y ofertas exclusivas.">
+    <meta property="og:image" content="path/to/image.jpg"> <!-- Añadir la ruta de la imagen para Open Graph -->
+    <meta property="og:url" content="http://www.tusitio.com">
+    <title>Categorias</title>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"> <!-- Agregar favicon -->
     <link rel="stylesheet" href="Css/main.css">
-    <title>4U Categorias</title>
-</head>
-<body>
-    <div class="navbar">
-        <div class="container">
-            <a class = "logo" href="#">4<span>U</span></a>
-            <div class="search-container">
-                <input class="searchBar" type="text" placeholder="Buscar...">
-                <img src="Images/search.svg" class="search-icon" alt="icono de busqueda">
-                
-            </div>
-              
-            <nav>
-                <ul class="Primary-nav">
-                    <li ><a href="index.html">Inicio</a></li>
-                    <li class="current"><a href="#">Categorias</a></li>
-                    <li><a href="Ofertas.html">Ofertas</a></li>
-                    <li><a href="Compras.html">Compras</a></li>
-                    <li><a href="Contacto.html">Contacto</a></li>
-                    <li><a href="Cuenta.html">Cuenta</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <!-- Cargar scripts de forma eficiente (si es necesario) -->
+    <script src="js/script.js" defer></script> <!-- Ejemplo para cargar JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .categorias-grid {
+            display: unset;
+            gap: unset;
+        }
     
+        .categoria-card {
+            background: #f3f0ff;
+            border: 1px solid #d6ccff;
+            border-radius: 12px;
+            padding: 1rem;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+    
+        .categoria-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        .categoria-card img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0.5rem;
+        }
+      </style>
+</head>
+<body style="background-image: url('images/fonts e righe.jpeg');">
+    
+    <main class="categorias-container">
+        <h1>Categorías de productos</h1>
+        <div class="row justify-content-center g-4">
+            <div class="col-6 col-md-3">
+                <a href="categoria-electronicos.html" class="categoria-card d-block text-center">
+                    <img src="Images/Laptop_de_mi_vm-removebg-preview.png" alt="Electrónicos">
+                    <span>Electrónicos</span>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="categoria-ropa.html" class="categoria-card d-block text-center">
+                    <img src="Images/Spring_Korean_Streetwear_Patchwork_Crew-Neck_Hoodie_for_Men_-_XXL___Red-removebg-preview.png" alt="Ropa">
+                    <span>Ropa</span>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="categoria-autos.html" class="categoria-card d-block text-center">
+                    <img src="Images/download-removebg-preview.png" alt="Autos">
+                    <span>Autos</span>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="categoria-libros.html" class="categoria-card d-block text-center">
+                    <img src="Images/Libros_Abiertos_Libros_De_Conocimiento_Libros_De_Estudio_Ilustraciones_De_Dibujos_Animados_PNG__dibujos__Libro_Clipart__Libros_Abiertos__Libros_De_Conocimiento_PNG_y_PSD_para_Descargar_Gratis___Pngtre.png" alt="Libros">
+                    <span>Libros</span>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="categoria-deportes.html" class="categoria-card d-block text-center">
+                    <img src="Images/Deportes_De_Pelota_Aparatos_De_Gimnasia_Fitness_Voleibol_De_Baloncesto_De_Dibujos_Animados_PNG__dibujos__Imágenes_Prediseñadas_De_Rugby__Deportes_De_Pelota__Equipo_De_Entrenamiento_PNG_y_PSD_para_Desc.png" alt="Deportes">
+                    <span>Deportes</span>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="categoria-comida.html" class="categoria-card d-block text-center">
+                    <img src="Images/download__2_-removebg-preview.png" alt="Comida">
+                    <span>Comida</span>
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
