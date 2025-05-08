@@ -5,6 +5,10 @@ from sqlalchemy.orm import sessionmaker
 
 # Cargar las variables de entorno
 load_dotenv()
+print("Cargando variables de entorno...")
+print("DB_USER:", os.getenv("DB_USER"))
+print("DB_PASSWORD:", os.getenv("DB_PASSWORD"))
+
 
 # Obtener las variables desde el archivo .env
 usuario = os.getenv("DB_USER")

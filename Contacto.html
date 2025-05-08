@@ -1,35 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/main.css">
-    <title>4U Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4U - Envíanos tu Opinión</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #6f42c1, #9370db);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    .contact-card {
+      background-color: #fff;
+      color: #333;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 600px;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+    .btn-submit {
+      background-color: #6f42c1;
+      border: none;
+    }
+    .btn-submit:hover {
+      background-color: #5a36a0;
+    }
+    h2 {
+      color: #6f42c1;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="container">
-            <a class = "logo" href="#">4<span>U</span></a>
-            <div class="search-container">
-                <input class="searchBar" type="text" placeholder="Buscar...">
-                <img src="Images/search.svg" class="search-icon" alt="icono de busqueda">
-                
-            </div>
-              
-            <nav>
-                <ul class="Primary-nav">
-                    <li ><a href="index.html">Inicio</a></li>
-                    <li ><a href="Categorias.html">Categorias</a></li>
-                    <li ><a href="Ofertas.html">Ofertas</a></li>
-                    <li ><a href="Compras.html">Compras</a></li>
-                    <li class="current"><a href="#">Contacto</a></li>
-                    <li><a href="Cuenta.html">Cuenta</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    
+  <div class="contact-card">
+    <h2 class="text-center mb-4">Queremos escucharte</h2>
+    <p class="text-center">Tu opinión es muy importante para mejorar nuestra plataforma 4U. Déjanos tu sugerencia, comentario o experiencia.</p>
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" required>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Tu mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-submit px-4 text-white">Enviar</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>

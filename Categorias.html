@@ -1,90 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de categorías 4U, donde podrás ver productos, ofertas y mucho más.">
-    <meta property="og:title" content="4U Categorías">
-    <meta property="og:description" content="Explora nuestras categorías de productos y ofertas exclusivas.">
-    <meta property="og:image" content="path/to/image.jpg"> <!-- Añadir la ruta de la imagen para Open Graph -->
-    <meta property="og:url" content="http://www.tusitio.com">
-    <title>Categorias</title>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"> <!-- Agregar favicon -->
-    <link rel="stylesheet" href="Css/main.css">
-    <!-- Cargar scripts de forma eficiente (si es necesario) -->
-    <script src="js/script.js" defer></script> <!-- Ejemplo para cargar JS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .categorias-grid {
-            display: unset;
-            gap: unset;
-        }
-    
-        .categoria-card {
-            background: #f3f0ff;
-            border: 1px solid #d6ccff;
-            border-radius: 12px;
-            padding: 1rem;
-            text-decoration: none;
-            color: #333;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-    
-        .categoria-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-    
-        .categoria-card img {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 0.5rem;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explora nuestras categorías de productos y ofertas exclusivas en 4U">
+  <meta property="og:title" content="4U Categorías">
+  <meta property="og:description" content="Explora nuestras categorías de productos y ofertas exclusivas">
+  <meta property="og:image" content="Images/og-categorias.jpg">
+  <meta property="og:url" content="http://www.4umercadoestudiantil.com/categorias.html">
+  <title>Categorías | 4U</title>
+  <link rel="icon" href="Images/favicon.ico">
+  <link rel="stylesheet" href="Css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background: url('images/fonts%20e%20righe.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .categorias-container {
+      padding: 3rem 1rem;
+    }
+    .categoria-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 1rem;
+      padding: 1.5rem 1rem;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #e0dfff;
+    }
+    .categoria-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    .categoria-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 0.75rem;
+    }
+    .categoria-card span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #343a40;
+    }
+    h1.titulo-categorias {
+      color: white;
+      background-color: #007bff;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      display: inline-block;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+    }
+    .volver-btn {
+      display: block;
+      margin: 1rem auto 3rem auto;
+    }
+  </style>
 </head>
-<body style="background-image: url('images/fonts e righe.jpeg');">
-    
-    <main class="categorias-container">
-        <h1>Categorías de productos</h1>
-        <div class="row justify-content-center g-4">
-            <div class="col-6 col-md-3">
-                <a href="categoria-electronicos.html" class="categoria-card d-block text-center">
-                    <img src="Images/Laptop_de_mi_vm-removebg-preview.png" alt="Electrónicos">
-                    <span>Electrónicos</span>
-                </a>
-            </div>
-            <div class="col-6 col-md-3">
-                <a href="categoria-ropa.html" class="categoria-card d-block text-center">
-                    <img src="Images/Spring_Korean_Streetwear_Patchwork_Crew-Neck_Hoodie_for_Men_-_XXL___Red-removebg-preview.png" alt="Ropa">
-                    <span>Ropa</span>
-                </a>
-            </div>
-            <div class="col-6 col-md-3">
-                <a href="categoria-autos.html" class="categoria-card d-block text-center">
-                    <img src="Images/download-removebg-preview.png" alt="Autos">
-                    <span>Autos</span>
-                </a>
-            </div>
-            <div class="col-6 col-md-3">
-                <a href="categoria-libros.html" class="categoria-card d-block text-center">
-                    <img src="Images/Libros_Abiertos_Libros_De_Conocimiento_Libros_De_Estudio_Ilustraciones_De_Dibujos_Animados_PNG__dibujos__Libro_Clipart__Libros_Abiertos__Libros_De_Conocimiento_PNG_y_PSD_para_Descargar_Gratis___Pngtre.png" alt="Libros">
-                    <span>Libros</span>
-                </a>
-            </div>
-            <div class="col-6 col-md-3">
-                <a href="categoria-deportes.html" class="categoria-card d-block text-center">
-                    <img src="Images/Deportes_De_Pelota_Aparatos_De_Gimnasia_Fitness_Voleibol_De_Baloncesto_De_Dibujos_Animados_PNG__dibujos__Imágenes_Prediseñadas_De_Rugby__Deportes_De_Pelota__Equipo_De_Entrenamiento_PNG_y_PSD_para_Desc.png" alt="Deportes">
-                    <span>Deportes</span>
-                </a>
-            </div>
-            <div class="col-6 col-md-3">
-                <a href="categoria-comida.html" class="categoria-card d-block text-center">
-                    <img src="Images/download__2_-removebg-preview.png" alt="Comida">
-                    <span>Comida</span>
-                </a>
-            </div>
-        </div>
-    </main>
+<body>
+  <main class="categorias-container container text-center">
+    <h1 class="titulo-categorias">Categorías de Productos</h1>
+    <a href="index.html" class="btn btn-outline-primary volver-btn">Volver al Inicio</a>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-electronicos.html" class="categoria-card d-block text-center">
+          <img src="Images/focos-removebg-preview.png" alt="Electrónicos">
+          <span>Electrónicos</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-ropa.html" class="categoria-card d-block text-center">
+          <img src="Images/computologo-removebg-preview.png" alt="compputacion">
+          <span>Computacion</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-autos.html" class="categoria-card d-block text-center">
+          <img src="Images/quimicos-removebg-preview.png" alt="quimicos">
+          <span>Quimicos</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-libros.html" class="categoria-card d-block text-center">
+          <img src="Images/civiles-removebg-preview.png" alt="civiles">
+          <span>Civiles</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-deportes.html" class="categoria-card d-block text-center">
+          <img src="Images/toporafo-removebg-preview.png" alt="topografo">
+          <span>Topografo</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-comida.html" class="categoria-card d-block text-center">
+          <img src="Images/alimentos-removebg-preview.png" alt="ingenieria en alimentos">
+          <span>ingenieria en alimentos</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-comida.html" class="categoria-card d-block text-center">
+          <img src="Images/fotonico-removebg-preview.png" alt="fotonico">
+          <span>fotonicos</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="categoria-comida.html" class="categoria-card d-block text-center">
+          <img src="Images/robotica-removebg-preview.png" alt="rbotica">
+          <span>Robotica</span>
+        </a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
